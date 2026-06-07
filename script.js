@@ -149,7 +149,6 @@ cartBtn.onclick = () => cartPanel.classList.add("open");
 closeCart.onclick = () => cartPanel.classList.remove("open");
 
 renderProducts();
-aiAdvice.innerText = "🤖 " + recomendarIA();
 updateCart();
 
 function recomendarIA() {
@@ -166,6 +165,9 @@ function recomendarIA() {
     Math.floor(Math.random() * recomendaciones.length)
   ];
 }
+
+aiAdvice.innerText = "🤖 " + recomendarIA();
+
 
 const buyBtn = document.getElementById("buyBtn");
 const aiAdvice = document.getElementById("aiAdvice");
