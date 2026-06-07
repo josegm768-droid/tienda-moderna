@@ -191,7 +191,7 @@ buyBtn.addEventListener("click", () => {
   mensaje += `%0A💰 Total: ${total}€`;
 
   // 🔥 TU NÚMERO AQUÍ (formato internacional)
-  const telefono = "34TU_NUMERO_AQUI";
+  const telefono = "34662545231";
 
   const url = `https://wa.me/${telefono}?text=${mensaje}`;
 
