@@ -149,4 +149,52 @@ cartBtn.onclick = () => cartPanel.classList.add("open");
 closeCart.onclick = () => cartPanel.classList.remove("open");
 
 renderProducts();
+aiAdvice.innerText = "🤖 " + recomendarIA();
 updateCart();
+
+function recomendarIA() {
+
+  const recomendaciones = [
+    "🔥 Te recomiendo el Laptop Gaming si quieres potencia",
+    "🎧 Los Auriculares Pro son los más vendidos",
+    "📱 El Smartphone Ultra es la mejor relación calidad/precio",
+    "🖥️ El Monitor 4K es ideal para productividad",
+    "🎮 El teclado RGB combina perfecto con la silla gaming"
+  ];
+
+  return recomendaciones[
+    Math.floor(Math.random() * recomendaciones.length)
+  ];
+}
+
+const buyBtn = document.getElementById("buyBtn");
+const aiAdvice = document.getElementById("aiAdvice");
+
+buyBtn.addEventListener("click", () => {
+
+  if (cart.length === 0) {
+    alert("El carrito está vacío");
+    return;
+  }
+
+  let mensaje = "🛒 *Nuevo Pedido Web*:%0A%0A";
+
+  let total = 0;
+
+  cart.forEach(item => {
+
+    mensaje += `• ${item.product.title} x${item.quantity} = ${item.product.price * item.quantity}€%0A`;
+
+    total += item.product.price * item.quantity;
+  });
+
+  mensaje += `%0A💰 Total: ${total}€`;
+
+  // 🔥 TU NÚMERO AQUÍ (formato internacional)
+  const telefono = "34TU_NUMERO_AQUI";
+
+  const url = `https://wa.me/${telefono}?text=${mensaje}`;
+
+  window.open(url, "_blank");
+
+});
