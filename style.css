@@ -230,3 +230,48 @@ header {
   }
 
 }
+
+.search-container {
+  padding: 0 40px;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  background: #1e293b;
+
+  color: white;
+}
+
+.favorite-btn {
+  margin-top: 10px;
+
+  width: 100%;
+
+  background: #f59e0b;
+}
+
+.favorite-btn:hover {
+  background: #d97706;
+}
+
+.remove-btn {
+  margin-top: 10px;
+
+  width: 100%;
+
+  background: #ef4444;
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+}
