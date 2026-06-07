@@ -119,6 +119,7 @@ function renderProducts(filter = "") {
           ${isFav ? "❤️ Favorito" : "🤍 Favorito"}
         </button>
       </div>
+      ';
 
     card.querySelector(".product-btn").onclick = () => addToCart(product);
 
